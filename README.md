@@ -35,3 +35,16 @@ const mixins = createMixins(breakpoints, spacing, {
 ```
 
 See [src/theme.ts](./src/theme.ts) for full declaration.
+
+The custom mixin `myBackgroundMxin` can be used as a `withStyles` argument.
+
+```tsx
+const styles = ({ mixins, palette }: Theme) => createStyles({
+  root: {
+    ...mixins.myBackgroundMixin,
+    color: palette.common.white,
+  }
+})
+```
+
+See [MyButton.tsx](./src/components/MyButton.tsx) as an example.
