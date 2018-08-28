@@ -1,6 +1,6 @@
 # practice: Material-UI Custom Mixins
 
-This is private practice to use `createMixins` of `@material-ui/core` (and TypeScript).
+This is a private practice to use `createMixins` of `@material-ui/core` (and TypeScript).
 
 ## Summary
 
@@ -20,11 +20,11 @@ Since that notes, we should do **interface declaration merging** to use `createM
 // interface declaration merging to add custom mixins
 declare module '@material-ui/core/styles/createMixins' {
   interface Mixins {
-    myBackgroundMixin: CSSProperties,
+    myBackgroundMixin: CSSProperties, // <- custom mixin!
   }
 }
 
-// get original configs to be used for following `createMixins`
+// get original configs to be used in following `createMixins`
 const { breakpoints, spacing } = createMuiTheme()
 
 const mixins = createMixins(breakpoints, spacing, {
